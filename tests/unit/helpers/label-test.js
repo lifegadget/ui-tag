@@ -5,6 +5,6 @@ module('Unit | Helper | label');
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  let result = label([42]);
+  let result = label(['foobar'], {});
   assert.ok(result);
 });

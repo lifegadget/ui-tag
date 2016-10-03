@@ -5,6 +5,8 @@ module('Unit | Helper | pill');
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  let result = pill([42]);
+  let result = pill(['foobar'], {
+    size: 'large'
+  });
   assert.ok(result);
 });

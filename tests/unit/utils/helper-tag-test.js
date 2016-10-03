@@ -5,6 +5,6 @@ module('Unit | Utility | helper tag');
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  let result = helperTag();
+  let result = helperTag(['foobar'], {});
   assert.ok(result);
 });
