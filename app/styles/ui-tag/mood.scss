@@ -1,0 +1,14 @@
+
+
+.tag-secondary {
+  @include tag-variant($tag-secondary-bg);
+}
+.tag-dark {
+  @include tag-variant($tag-dark-bg);
+}
+.tag-aged {
+  @include tag-variant($tag-aged-bg);
+}
+.tag-faint {
+  @include tag-variant($tag-faint-bg);
+}

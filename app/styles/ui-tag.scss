@@ -1,0 +1,20 @@
+@import 'ui-tag/variables';
+$enable-flex: true;
+
+// @import 'ui-tag/bootstrap/variables';
+@import 'ui-tag/bootstrap/mixins/border-radius';
+@import 'ui-tag/bootstrap/mixins/hover';
+@import 'ui-tag/bootstrap/mixins/tag';
+@import 'ui-tag/bootstrap/tags';
+
+@import 'ui-tag/mood';
+@import 'ui-tag/size';
+
+.tag.clickable {
+  @include hover-focus {
+    color: $tag-link-hover-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
