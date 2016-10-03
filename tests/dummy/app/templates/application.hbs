@@ -1,0 +1,140 @@
+{{#markdown-convert style='github'}}
+
+  # ui-label
+  > lovely labels (and pills) for your Ember apps
+
+  ## Install
+
+  At a terminal window:
+
+  ```sh
+  ember install ui-label
+  ```
+
+  This will load an **npm** version of the Bootstrap 4.0 library but only include the styling that is needed to render
+  a "pill" or a "label". If you're not using the `ember-cli-sass` addon then it will fall back to including the CSS as just
+  CSS. In this situation you are done, styling should be immediately available.
+
+  If you _are_ using SASS, then you'll need to include add `@import 'ui-label';` to your `app.scss` stylesheet. If you want to change any of the bootstrap variables -- like colors, etc. -- then do this before you include the _import_ directive.
+
+  ## Usage
+
+  There are two visual representations that this addon provides:
+
+{{/markdown-convert}}
+<ul>
+  <li>{{ui-label 'Label' size='large'}} - a label is a colored background with slightly rounded corners</li>
+  <li>{{ui-pill 'Pill' size='large'}} - similar to a label but with much more pronounced rounding of corners</li>
+</ul>
+
+{{#markdown-convert style='github'}}
+
+  ### Nominclature
+
+  The terms "label" and "pill" came from Bootstrap 3 but somewhere in Bootstrap 4 there was a decision to call them both "tags" (where a "pill" is just a specialization of tag). I'd be guessing but the term "label" almost surely caused some cognative interferance with the HTML element of the same name. With this background in mind, we will primarily stick to the modern naming although because `ui-label` did exist in the past we will leave it in as deprecated:
+
+  - Components
+      - `ui-tag` and `ui-pill`; `ui-label` available but deprecated
+  - Helpers
+      - `tag` and `pill`
+
+  > The reality is that all use the same template with "pill" components/helpers simply adding the "tag-pill" class.
+
+  ### Rendering with Component _or_ Helper
+
+  This addon provides both `components` and `helpers` to provide the aforementioned functionality. Using a component gives you access to both the 'inline' and 'block' formats; whereas the helpers will be slightly faster to render but only provides an "inline" style.
+
+  Let's take a look at this variation by example, starting with the component:
+
+{{/markdown-convert}}
+
+<br>
+<div class="flex">
+  <div class="widgets flex column">
+    {{ui-tag 'inline positional'  onClick=(action 'foobar')}}
+  </div>
+  <div class="flex hbs">
+    <div class="codeblock">\{{ui-tag 'inline positional'}}</div>
+  </div>
+</div>
+<div class="flex">
+  <div class="widgets flex column">
+    {{ui-tag title='inline explicit'}}
+  </div>
+  <div class="flex hbs">
+    <div class="codeblock">\{{ui-tag title='inline explicit'}}</div>
+  </div>
+</div>
+<div class="flex">
+  <div class="widgets flex column">
+    {{#ui-tag}}block format{{/ui-tag}}
+  </div>
+  <div class="flex hbs">
+    <div class="codeblock">\{{#ui-tag}}block format\{{/ui-tag}}</div>
+  </div>
+</div>
+
+{{#markdown-convert style='gihub'}}
+
+  And the helper is just:
+
+{{/markdown-convert}}
+
+<div class="flex">
+  <div class="widgets flex column">
+    {{tag 'helper' onClick=(action 'foobar')}}
+  </div>
+  <div class="flex hbs">
+    <div class="codeblock">\{{tag 'helper' onClick=(action 'foobar')}}</div>
+  </div>
+</div>
+<br>
+
+{{#markdown-convert style='github'}}
+
+  ### Clickable
+  You can add an `onclick` DOM action on a label/pill/tag by setting the `onClick` property. Setting this will turn on a css property 'clickable' which will give you the standard pointer cursor when hovering. It will also wire up a click event to whereever you specify.
+
+  In the above section you can see examples of those which use the onClick handler.
+
+  > Note: in order to allow a pure function (aka, the helpers) to perform the same way as the component with curried functions we have had to attach the click event immediately after being attached to the DOM. Some may feel this is "hacky" but it does work well and effectively preserves the same DDAU API surface which we use with components. If you're not happy with that just use the component. 😏
+
+  ### Mood
+  The "mood" nominclature  is consistenly used in the `ui-*` Ember components to help distinguish stylistically the element based on brand, state, or whatever criteria. When looking at a mapping to Bootstrap styling this is referred to as "brand". In order to access it in either component or helper you just set the `mood` property to one of the following:
+
+{{/markdown-convert}}
+
+<div class="flex">
+  <div class="list">
+
+    {{#markdown-convert style='github'}}
+      - primary | `$mood-primary`
+      - _secondary_
+      - success
+      - info
+      - warning
+      - danger
+      - _dark_
+      - _aged_
+      - _faint_
+    {{/markdown-convert}}
+  </div>
+  <div class="examples flex wrap align-center">
+    <div class="flex">{{tag 'primary' mood='primary' class='blocky'}}</div>
+    <div class="flex">{{tag 'secondary' mood='secondary' class='blocky'}}</div>
+    <div class="flex">{{tag 'success' mood='success' class='blocky'}}</div>
+    <div class="flex">{{tag 'info' mood='info' class='blocky'}}</div>
+    <div class="flex">{{tag 'warning' mood='warning' class='blocky'}}</div>
+    <div class="flex">{{tag 'danger' mood='danger' class='blocky'}}</div>
+    <div class="flex">{{tag 'dark' mood='dark' class='blocky'}}</div>
+    <div class="flex">{{tag 'aged' mood='aged' class='blocky'}}</div>
+    <div class="flex">{{tag 'faint' mood='faint' class='blocky'}}</div>
+  </div>
+</div>
+
+
+{{#markdown-convert style='github'}}
+  Several of these moods have a direct Bootstrap counterpart except those italicized which are additive. If you're using SASS you can define the color values with the variable `$mood-ABC`. This will impact all SASS-aware `ui-*` components, if you want to _only_ target the label/pill's then you can set the `$tag-ABC-bg` property.
+
+
+{{/markdown-convert}}

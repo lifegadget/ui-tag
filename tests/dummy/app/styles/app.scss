@@ -1,0 +1,58 @@
+@import 'ui-label';
+
+body {
+  padding: 2rem;
+  font-family: Verdana, Geneva, sans-serif;
+  max-width: 1200px;
+}
+
+.flex {
+  display: flex;
+
+  &.column {
+    flex-direction: column;
+  }
+  &.fill {
+    flex: 1 0;
+    margin: 0.25rem;
+  }
+
+  div, span {
+    margin: 0.25rem 0.5rem;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.align-center {
+    align-items: center;
+  }
+}
+
+.hbs pre {
+  margin: 0.25rem;
+}
+
+.row {
+  width: 100%;
+}
+
+.widgets {
+  padding: 0.5rem;
+}
+
+.codeblock {
+  padding: 0.5rem;
+  font-family: monospace;
+  border-radius: 2px;
+  background-color: hsl(0, 0%, 93.3%);
+}
+
+span.blocky {
+  width: 75px;
+  height: 75px;
+}
+
+div.list {
+  flex-basis: 350px;
+}

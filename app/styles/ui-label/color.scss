@@ -1,0 +1,44 @@
+$gray-dark:                 #373a3c !default;
+$gray:                      #55595c !default;
+$gray-light:                #818a91 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+
+$mood-primary:             #0275d8 !default;
+$mood-secondary:           #8f70d5 !default;
+$mood-success:             #5cb85c !default;
+$mood-info:                #5bc0de !default;
+$mood-warning:             #f0ad4e !default;
+$mood-danger:              #d9534f !default;
+$mood-dark:                #1B1C20 !default;
+$mood-aged:                #c4c4c4 !default;
+$mood-faint:               #eaeaea !default;
+
+$tag-default-bg:            $gray-light !default;
+$tag-primary-bg:            $mood-primary !default;
+$tag-secondary-bg:          $mood-secondary !default;
+$tag-success-bg:            $mood-success !default;
+$tag-info-bg:               $mood-info !default;
+$tag-warning-bg:            $mood-warning !default;
+$tag-danger-bg:             $mood-danger !default;
+$tag-dark-bg:               $mood-dark !default;
+$tag-aged-bg:               $mood-aged !default;
+$tag-faint-bg:              $mood-faint !default;
+
+$tag-color:                 #fff !default;
+$tag-link-hover-color:      #fff !default;
+$tag-font-size:             75% !default;
+$tag-font-weight:           bold !default;
+$tag-padding-x:             .4em !default;
+$tag-padding-y:             .25em !default;
+
+$tag-pill-padding-x:        .6em !default;
+// Use a higher than normal value to ensure completely rounded edges when
+// customizing padding or font-size on labels.
+$tag-pill-border-radius:    10rem !default;
+
+$brand-primary:             $mood-primary;
+$brand-success:             $mood-success;
+$brand-info:                $mood-info;
+$brand-warning:             $mood-warning;
+$brand-danger:              $mood-danger;
