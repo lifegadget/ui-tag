@@ -1,1 +1,1 @@
-export { default, tag } from 'ui-label/helpers/tag';
+export { default, tag } from 'ui-tag/helpers/tag';

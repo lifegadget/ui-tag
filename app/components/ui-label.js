@@ -1,1 +1,1 @@
-export { default } from 'ui-label/components/ui-label';
+export { default } from 'ui-tag/components/ui-label';

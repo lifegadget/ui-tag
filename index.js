@@ -6,18 +6,18 @@ const Funnel = require('broccoli-funnel');
 const mergeTrees = require('broccoli-merge-trees');
 
 module.exports = {
-  name: 'ui-label',
+  name: 'ui-tag',
   normalizeEntityName: function () { },
   included: function (appOrAddon) {
     this._super.included(app);
     var app = appOrAddon.app || appOrAddon;
     var options = typeof app.options === 'object' ? app.options : {};
-    var addonConfig = options['ui-label'] || {};
+    var addonConfig = options['ui-tag'] || {};
 
     // If container is not using SCSS then just add styling as CSS
     if (!app.registry.availablePlugins['ember-cli-sass']) {
-      this.ui.writeLine(chalk.bold('ui-label: ') + ' did not detect ' + chalk.bold.green('ember-cli-sass') + ', using CSS configuration instead of SASS.');
-      app.import('vendor/ui-label/ui-label.css');
+      this.ui.writeLine(chalk.bold('ui-tag: ') + ' did not detect ' + chalk.bold.green('ember-cli-sass') + ', using CSS configuration instead of SASS.');
+      app.import('vendor/ui-tag/ui-tag.css');
     }
 
   },
@@ -31,7 +31,7 @@ module.exports = {
     const existingStyle = this._super.treeForStyles.apply(this, arguments);
     const bootstrap = new Funnel(bootstrapPath, {
       srcDir: '/',
-      destDir: '/ui-label/bootstrap'
+      destDir: '/ui-tag/bootstrap'
     });
     trees.push(bootstrap);
     if (existingStyle) {

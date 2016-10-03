@@ -1,1 +1,1 @@
-export { default, pill } from 'ui-label/helpers/pill';
+export { default, pill } from 'ui-tag/helpers/pill';

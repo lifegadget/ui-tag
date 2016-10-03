@@ -1,6 +1,6 @@
 {
-  "name": "ui-label",
-  "version": "0.0.0",
+  "name": "ui-tag",
+  "version": "0.1.0",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",

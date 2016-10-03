@@ -1,21 +1,21 @@
 {{#markdown-convert style='github'}}
 
-  # [ui-label](https://github.com/lifegadget/ui-tag)
-  > lovely labels (and pills) for your Ember apps
+  # [ui-tag](https://github.com/lifegadget/ui-tag)
+  > lovely tags (and pills) for your Ember apps
 
   ## Install
 
   At a terminal window:
 
   ```sh
-  ember install ui-label
+  ember install ui-tag
   ```
 
   This will load an **npm** version of the Bootstrap 4.0 library but only include the styling that is needed to render
   a "pill" or a "label". If you're not using the `ember-cli-sass` addon then it will fall back to including the CSS as just
   CSS. In this situation you are done, styling should be immediately available.
 
-  If you _are_ using SASS, then you'll need to include add `@import 'ui-label';` to your `app.scss` stylesheet. If you want to change any of the bootstrap variables -- like colors, etc. -- then do this before you include the _import_ directive.
+  If you _are_ using SASS, then you'll need to include add `@import 'ui-tag';` to your `app.scss` stylesheet. If you want to change any of the bootstrap variables -- like colors, etc. -- then do this before you include the _import_ directive.
 
   ## Usage
 
@@ -23,7 +23,7 @@
 
 {{/markdown-convert}}
 <ul>
-  <li>{{ui-label 'Label' size='large'}} - a label is a colored background with slightly rounded corners</li>
+  <li>{{ui-tag 'Tag' size='large'}} - a tag is a colored background with slightly rounded corners</li>
   <li>{{ui-pill 'Pill' size='large'}} - similar to a label but with much more pronounced rounding of corners</li>
 </ul>
 
@@ -115,6 +115,7 @@
       - warning
       - danger
       - _dark_
+      - default
       - _aged_
       - _faint_
     {{/markdown-convert}}
@@ -127,6 +128,7 @@
     <div class="flex">{{tag 'warning' mood='warning' class='blocky'}}</div>
     <div class="flex">{{tag 'danger' mood='danger' class='blocky'}}</div>
     <div class="flex">{{tag 'dark' mood='dark' class='blocky'}}</div>
+    <div class="flex">{{tag 'default' mood='default' class='blocky'}}</div>
     <div class="flex">{{tag 'aged' mood='aged' class='blocky'}}</div>
     <div class="flex">{{tag 'faint' mood='faint' class='blocky'}}</div>
   </div>
@@ -134,7 +136,30 @@
 
 
 {{#markdown-convert style='github'}}
-  Several of these moods have a direct Bootstrap counterpart except those italicized which are additive. If you're using SASS you can define the color values with the variable `$mood-ABC`. This will impact all SASS-aware `ui-*` components, if you want to _only_ target the label/pill's then you can set the `$tag-ABC-bg` property.
+  Several of these moods have a direct Bootstrap counterpart except those italicized which are additive. If you're using SASS you can define the color values with the variable `$mood-ABC`. This will impact all SASS-aware `ui-*` components, if you want to _only_ target the tag/pill's then you can set the `$tag-ABC-bg` property.
 
+  ### Size
+
+  This addon's size is largely a determinant of the font-size which contains it. If you want to explicitly set it to one of a few named sizes though you can do so with the `size` parameter.
 
 {{/markdown-convert}}
+
+<div class="flex">
+  <div class="list">
+
+    {{#markdown-convert style='github'}}
+      - tiny
+      - small
+      - default
+      - large
+      - huge
+    {{/markdown-convert}}
+  </div>
+  <div class="examples flex wrap align-center">
+    <div class="flex">{{pill 'tiny' mood='faint' size='tiny'}}</div>
+    <div class="flex">{{pill 'small' mood='aged' size='small'}}</div>
+    <div class="flex">{{pill 'default' mood='default' size='default'}}</div>
+    <div class="flex">{{pill 'large' mood='warning' size='large'}}</div>
+    <div class="flex">{{pill 'huge' mood='danger' size='huge'}}</div>
+  </div>
+</div>

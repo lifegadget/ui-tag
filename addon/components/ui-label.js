@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import uiTag from 'ui-label/components/ui-tag';
+import uiTag from 'ui-tag/components/ui-tag';
 
 const label = uiTag.extend({
   init() {

@@ -1,1 +1,1 @@
-export { default } from 'ui-label/controllers/application';
+export { default } from 'ui-tag/controllers/application';

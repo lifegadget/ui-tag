@@ -1,1 +1,1 @@
-export { default } from 'ui-label/components/ui-pill';
+export { default } from 'ui-tag/components/ui-pill';
