@@ -2,10 +2,10 @@
 $enable-flex: true;
 
 // @import 'ui-tag/bootstrap/variables';
-@import 'ui-tag/bootstrap/mixins/border-radius';
-@import 'ui-tag/bootstrap/mixins/hover';
-@import 'ui-tag/bootstrap/mixins/tag';
-@import 'ui-tag/bootstrap/tags';
+@import 'ui-tag/bootstrap-source/mixins/border-radius';
+@import 'ui-tag/bootstrap-source/mixins/hover';
+@import 'ui-tag/bootstrap-source/mixins/tag';
+@import 'ui-tag/bootstrap-source/tags';
 
 @import 'ui-tag/mood';
 @import 'ui-tag/size';

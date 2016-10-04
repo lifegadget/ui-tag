@@ -16,7 +16,7 @@ module.exports = {
 
     // If container is not using SCSS then just add styling as CSS
     if (!app.registry.availablePlugins['ember-cli-sass']) {
-      this.ui.writeLine(chalk.bold('ui-tag: ') + ' did not detect ' + chalk.bold.green('ember-cli-sass') + ', using CSS configuration instead of SASS.');
+      this.ui.writeLine(chalk.bold('ui-tag: ') + ' did not detect ' + chalk.bold.green('ember-cli-sass') + ', using static CSS configuration instead of SASS.');
       app.import('vendor/ui-tag/ui-tag.css');
     }
 
@@ -31,7 +31,7 @@ module.exports = {
     const existingStyle = this._super.treeForStyles.apply(this, arguments);
     const bootstrap = new Funnel(bootstrapPath, {
       srcDir: '/',
-      destDir: '/ui-tag/bootstrap'
+      destDir: '/ui-tag/bootstrap-source'
     });
     trees.push(bootstrap);
     if (existingStyle) {
