@@ -9,11 +9,9 @@ At a terminal window:
 ember install ui-tag
 ```
 
-This will load an **npm** version of the Bootstrap 4.0 library but only include the styling that is needed to render
-a "pill" or a "label". If you're not using the `ember-cli-sass` addon then it will fall back to including the CSS as just
-CSS. In this situation you are done, styling should be immediately available.
+This will load an **npm** version of the Bootstrap 4.0 library but only include the styling that is needed to render a "pill" or a "tag". 
 
-If you _are_ using SASS, then you'll need to include add `@import 'ui-tag';` to your `app.scss` stylesheet. If you want to change any of the bootstrap variables -- like colors, etc. -- then do this before you include the _import_ directive.
+If you _are_ using SASS, then you'll need to include add `@import 'ui-tag';` to your `app.scss` stylesheet. The SASS integration also allows you to change any of the bootstrap variables -- like colors, etc. -- to modify the look and feel. Just make sure to do this _before_ you include the _import_ directive.
 
 ## Demo
 
