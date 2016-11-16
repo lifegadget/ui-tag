@@ -8,7 +8,7 @@ const moduleName = 'ui-tag';
 const inputFile = path.join(__dirname, 'app', 'styles', `${moduleName}.scss`);
 const outputFile = path.join(__dirname, 'vendor', `${moduleName}`, `${moduleName}.css`);
 
-const broccoliAlias = `/bootstrap-source`;
+const broccoliAlias = `bootstrap-source`;
 const physicalFilePath = path.join(__dirname, 'node_modules/bootstrap/scss');
 
 // Compile main file
