@@ -20,7 +20,7 @@ const label = Ember.Component.extend({
   size: null,
   _size: Ember.computed('size', function() {
     const size = this.get('size');
-    return size ? ` pill-size-${size}` : null;
+    return size ? ` size-${size}` : null;
   }),
   clickable: false,
 

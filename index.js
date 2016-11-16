@@ -18,12 +18,15 @@ module.exports = {
     if (!app.registry.availablePlugins['ember-cli-sass']) {
       this.ui.writeLine(chalk.bold('ui-tag: ') + ' did not detect ' + chalk.bold.green('ember-cli-sass') + ', using static CSS configuration instead of SASS.');
       app.import('vendor/ui-tag/ui-tag.css');
+    } else {
+      const sassOptions = app.options.sassOptions || { includePaths: []};
+      sassOptions.includePaths.push(path.join(__dirname, 'ui-tag', 'bootstrap-source'));
     }
 
   },
 
   treeForStyles: function(tree) {
-    const bootstrapPath = path.join('node_modules', 'bootstrap/scss');
+    const bootstrapPath = path.join(__dirname, 'node_modules', 'bootstrap/scss');
     const trees = [];
     if(tree) {
       trees.push(tree);
@@ -31,7 +34,7 @@ module.exports = {
     const existingStyle = this._super.treeForStyles.apply(this, arguments);
     const bootstrap = new Funnel(bootstrapPath, {
       srcDir: '/',
-      destDir: '/ui-tag/bootstrap-source'
+      destDir: '/bootstrap-source'
     });
     trees.push(bootstrap);
     if (existingStyle) {
