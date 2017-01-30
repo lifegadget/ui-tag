@@ -29,12 +29,12 @@
 
   ### Nominclature
 
-  The terms "label" and "pill" came from Bootstrap 3 but somewhere in Bootstrap 4 there was a decision to call them both "tags" (where a "pill" is just a specialization of tag). I'd be guessing but the term "label" almost surely caused some cognative interferance with the HTML element of the same name. With this background in mind, we will primarily stick to the modern naming although because `ui-label` did exist in the past we will leave it in as deprecated:
+  The terms "label" and "pill" came from Bootstrap 3 but early in Bootstrap 4 there was a decision to call them both "tags" (where a "pill" is just a specialization of tag). Since Alpha-6 this has again changed away from "tag" and toward "badge" (again with the pill variant). We will for now support "tag" and "badge" synonmously as the more squared style and "pill" as the more rounded variant. The `ui-label` component is still available but deprecated.
 
   - Components
-      - `ui-tag` and `ui-pill`; `ui-label` available but deprecated
+      - `ui-tag` / `ui-badge` and `ui-pill`; `ui-label` available but deprecated
   - Helpers
-      - `tag` and `pill`
+      - `tag`, `badge`, and `pill`
 
   > The reality is that all use the same template with "pill" components/helpers simply adding the "tag-pill" class.
 
@@ -74,16 +74,32 @@
 
 {{#markdown-convert style='gihub'}}
 
-  And the helper is just:
+  And the helpers are:
 
 {{/markdown-convert}}
 
+<div class="flex">
+  <div class="widgets flex column">
+    {{badge 'helper' onClick=(action 'foobar')}}
+  </div>
+  <div class="flex hbs">
+    <div class="codeblock">\{{badge 'helper' onClick=(action 'foobar')}}</div>
+  </div>
+</div>
 <div class="flex">
   <div class="widgets flex column">
     {{tag 'helper' onClick=(action 'foobar')}}
   </div>
   <div class="flex hbs">
     <div class="codeblock">\{{tag 'helper' onClick=(action 'foobar')}}</div>
+  </div>
+</div>
+<div class="flex">
+  <div class="widgets flex column">
+    {{pill 'helper' onClick=(action 'foobar')}}
+  </div>
+  <div class="flex hbs">
+    <div class="codeblock">\{{pill 'helper' onClick=(action 'foobar')}}</div>
   </div>
 </div>
 <br>

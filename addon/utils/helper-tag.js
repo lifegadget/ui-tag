@@ -7,11 +7,11 @@ export default function helperTag(params, hash) {
   const userClass = hash.class ? hash.class + ' ' : '';
   const clickable = hash.onClick ? ' clickable' : '';
   const size = hash.size ? ` ${hash.size}-size` : '';
-  const pill = hash.isPill ? ' tag-pill' : '';
+  const pill = hash.isPill ? ' badge-pill' : '';
   const id = Math.random().toString(36).substr(2, 10);
   const body = '<span ' +
     `id="${id}" ` +
-    `class="${userClass}tag${pill} tag-${mood}${clickable}${size}"` +
+    `class="${userClass}badge${pill} badge-${mood}${clickable}${size}"` +
     '>' +
     text +
   '</span>';

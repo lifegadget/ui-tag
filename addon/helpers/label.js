@@ -1,25 +1,10 @@
 import Ember from 'ember';
-const htmlSafe = Ember.String.htmlSafe;
+import badge from 'ui-tag/utils/helper-tag';
 
 export function label(params, hash) {
-  const text = params.join('');
-  const mood = hash.mood || 'default';
-  const clickable = hash.onClick ? ' clickable' : '';
-  const id = Math.random().toString(36).substr(2, 10);
-  const body = '<span ' +
-    `id="${id}" ` +
-    `class="tag tag-${mood}${clickable}"` +
-    '>' +
-    text +
-  '</span>';
-
-  if(clickable) {
-    Ember.run.next(() => {
-      document.getElementById(id).addEventListener('click', hash.onClick);
-    });
-  }
-
-  return htmlSafe(body);
+  const {debug} = Ember;
+  debug('You used the "label" helper in the ui-tag addon; this nomenclature is deprecated as Bootstrap has moved to calling this a badge (or pill). Please update your template.');
+  return badge(params, Ember.assign({}, hash, { isPill: true }));
 }
 
 export default Ember.Helper.helper(label);
