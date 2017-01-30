@@ -1,4 +1,4 @@
-.tag {
+.badge {
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
@@ -9,86 +9,86 @@
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem; }
-  .tag:empty {
+  .badge:empty {
     display: none; }
 
-.btn .tag {
+.btn .badge {
   position: relative;
   top: -1px; }
 
-a.tag:focus, a.tag:hover {
+a.badge:focus, a.badge:hover {
   color: #fff;
   text-decoration: none;
   cursor: pointer; }
 
-.tag-pill {
+.badge-pill {
   padding-right: 0.6em;
   padding-left: 0.6em;
   border-radius: 10rem; }
 
-.tag-default {
-  background-color: #818a91; }
-  .tag-default[href]:focus, .tag-default[href]:hover {
-    background-color: #687077; }
+.badge-default {
+  background-color: #636c72; }
+  .badge-default[href]:focus, .badge-default[href]:hover {
+    background-color: #4b5257; }
 
-.tag-primary {
+.badge-primary {
   background-color: #0275d8; }
-  .tag-primary[href]:focus, .tag-primary[href]:hover {
+  .badge-primary[href]:focus, .badge-primary[href]:hover {
     background-color: #025aa5; }
 
-.tag-success {
+.badge-success {
   background-color: #5cb85c; }
-  .tag-success[href]:focus, .tag-success[href]:hover {
+  .badge-success[href]:focus, .badge-success[href]:hover {
     background-color: #449d44; }
 
-.tag-info {
+.badge-info {
   background-color: #5bc0de; }
-  .tag-info[href]:focus, .tag-info[href]:hover {
+  .badge-info[href]:focus, .badge-info[href]:hover {
     background-color: #31b0d5; }
 
-.tag-warning {
+.badge-warning {
   background-color: #f0ad4e; }
-  .tag-warning[href]:focus, .tag-warning[href]:hover {
+  .badge-warning[href]:focus, .badge-warning[href]:hover {
     background-color: #ec971f; }
 
-.tag-danger {
+.badge-danger {
   background-color: #d9534f; }
-  .tag-danger[href]:focus, .tag-danger[href]:hover {
+  .badge-danger[href]:focus, .badge-danger[href]:hover {
     background-color: #c9302c; }
 
-.tag-secondary {
+.badge-secondary {
   background-color: #8f70d5; }
-  .tag-secondary[href]:focus, .tag-secondary[href]:hover {
+  .badge-secondary[href]:focus, .badge-secondary[href]:hover {
     background-color: #7049c9; }
 
-.tag-dark {
+.badge-dark {
   background-color: #1B1C20; }
-  .tag-dark[href]:focus, .tag-dark[href]:hover {
+  .badge-dark[href]:focus, .badge-dark[href]:hover {
     background-color: #040404; }
 
-.tag-aged {
+.badge-aged {
   background-color: #c4c4c4; }
-  .tag-aged[href]:focus, .tag-aged[href]:hover {
+  .badge-aged[href]:focus, .badge-aged[href]:hover {
     background-color: #ababab; }
 
-.tag-faint {
+.badge-faint {
   background-color: #eaeaea; }
-  .tag-faint[href]:focus, .tag-faint[href]:hover {
+  .badge-faint[href]:focus, .badge-faint[href]:hover {
     background-color: #d1d1d1; }
 
-.tag.tiny-size {
+.badge.tiny-size {
   font-size: 0.75rem; }
 
-.tag.small-size {
+.badge.small-size {
   font-size: 0.875rem; }
 
-.tag.default-size {
+.badge.default-size {
   font-size: 1rem; }
 
-.tag.large-size {
+.badge.large-size {
   font-size: 1.25rem; }
 
-.tag.huge-size {
+.badge.huge-size {
   font-size: 2rem; }
 
 .tag.clickable:focus, .tag.clickable:hover {
