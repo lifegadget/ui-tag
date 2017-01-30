@@ -1,12 +1,12 @@
-.tag-secondary {
-  @include tag-variant($tag-secondary-bg);
+.badge-secondary {
+  @include badge-variant($badge-secondary-bg);
 }
-.tag-dark {
-  @include tag-variant($tag-dark-bg);
+.badge-dark {
+  @include badge-variant($badge-dark-bg);
 }
-.tag-aged {
-  @include tag-variant($tag-aged-bg);
+.badge-aged {
+  @include badge-variant($badge-aged-bg);
 }
-.tag-faint {
-  @include tag-variant($tag-faint-bg);
+.badge-faint {
+  @include badge-variant($badge-faint-bg);
 }

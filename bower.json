@@ -1,8 +1,6 @@
 {
-  "name": "ui-label",
+  "name": "ui-tag",
   "dependencies": {
-    "ember": "~2.8.1",
-    "ember-cli-shims": "0.1.3",
     "showdown": "^1.4.0"
   }
 }

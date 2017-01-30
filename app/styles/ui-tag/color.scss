@@ -14,28 +14,28 @@ $mood-dark:                #1B1C20 !default;
 $mood-aged:                #c4c4c4 !default;
 $mood-faint:               #eaeaea !default;
 
-$tag-default-bg:            $gray-light !default;
-$tag-primary-bg:            $mood-primary !default;
-$tag-secondary-bg:          $mood-secondary !default;
-$tag-success-bg:            $mood-success !default;
-$tag-info-bg:               $mood-info !default;
-$tag-warning-bg:            $mood-warning !default;
-$tag-danger-bg:             $mood-danger !default;
-$tag-dark-bg:               $mood-dark !default;
-$tag-aged-bg:               $mood-aged !default;
-$tag-faint-bg:              $mood-faint !default;
+$badge-default-bg:            $gray-light !default;
+$badge-primary-bg:            $mood-primary !default;
+$badge-secondary-bg:          $mood-secondary !default;
+$badge-success-bg:            $mood-success !default;
+$badge-info-bg:               $mood-info !default;
+$badge-warning-bg:            $mood-warning !default;
+$badge-danger-bg:             $mood-danger !default;
+$badge-dark-bg:               $mood-dark !default;
+$badge-aged-bg:               $mood-aged !default;
+$badge-faint-bg:              $mood-faint !default;
 
-$tag-color:                 #fff !default;
-$tag-link-hover-color:      #fff !default;
-$tag-font-size:             75% !default;
-$tag-font-weight:           bold !default;
-$tag-padding-x:             .4em !default;
-$tag-padding-y:             .25em !default;
+$badge-color:                 #fff !default;
+$badge-link-hover-color:      #fff !default;
+$badge-font-size:             75% !default;
+$badge-font-weight:           bold !default;
+$badge-padding-x:             .4em !default;
+$badge-padding-y:             .25em !default;
 
-$tag-pill-padding-x:        .6em !default;
+$badge-pill-padding-x:        .6em !default;
 // Use a higher than normal value to ensure completely rounded edges when
 // customizing padding or font-size on labels.
-$tag-pill-border-radius:    10rem !default;
+$badge-pill-border-radius:    10rem !default;
 
 $brand-primary:             $mood-primary;
 $brand-success:             $mood-success;
