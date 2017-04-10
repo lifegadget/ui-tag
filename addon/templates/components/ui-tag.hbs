@@ -1,4 +1,4 @@
-<span class="badge badge-{{_mood}}{{_size}} {{if isPill 'badge-pill'}}{{if clickable ' clickable'}}" onclick={{action 'onClick'}}>
+<span class="{{if class (concat class ' ')}}badge badge-{{_mood}}{{_size}} {{if isPill 'badge-pill'}}{{if clickable ' clickable'}}" onclick={{action 'onClick'}}>
   {{#if hasBlock}}
     {{yield}}
   {{else}}
